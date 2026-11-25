@@ -4,3 +4,35 @@
 @media(max-width:390px){.header-cta{display:none}.menu{margin-left:auto}.hero-actions{gap:15px}.practice-grid{gap:7px}.practice-card h3{font-size:16px}.practice-card>div{padding:13px 8px}.practice-card img{height:120px}.promise-strip strong{font-size:13px}.promise-strip small{font-size:7px}.hero-art{height:395px}.hero-person{height:395px}.daily-card{bottom:60px}.hero-art .orbit{height:360px}.hero-art .orbit-two{height:400px}.breath-card{right:-9px}.footer-top nav{font-size:9px;gap:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.breathing-orb{transform:none!important}}
 .page-shell{overflow:clip}.breath-number span{white-space:nowrap}@media(max-width:760px){.hero-actions .watch{flex-shrink:0}.hero-actions .watch>span:last-child{max-width:95px}.section-intro h2 br:first-child{display:initial}}
+/* Yoga-only icon language: every pictogram moves with a gentle breathing rhythm. */
+.yoga-icon{display:inline-block;width:1.45em;height:1.45em;flex-shrink:0;vertical-align:middle;overflow:visible;transform-origin:center;animation:yoga-bloom 5s ease-in-out infinite;will-change:transform}
+.yoga-meditation{animation-name:yoga-sway;animation-duration:6s}.yoga-balance{animation-name:yoga-balance;animation-duration:6.5s}.yoga-breath{animation-name:yoga-breath;animation-duration:4.8s}.yoga-mudra{animation-name:yoga-sway;animation-duration:5.5s}
+.brand .brand-lotus{animation:yoga-bloom 6s ease-in-out infinite}.button>span .yoga-icon{width:23px;height:23px}.round-link .yoga-icon{width:20px;height:20px}.play .yoga-icon{width:27px;height:27px}.tiny-lotus .yoga-icon{width:21px;height:21px}.star .yoga-icon{width:40px;height:40px}.daily-card>span .yoga-icon{width:39px;height:39px}.strip-icon .yoga-icon{width:35px;height:35px}.benefits>div:nth-child(2) .yoga-icon{animation-delay:-1s}.benefits>div:nth-child(3) .yoga-icon{animation-delay:-2s}.benefits>div:nth-child(4) .yoga-icon{animation-delay:-3s}.benefits .yoga-icon{width:38px;height:38px}.growth-card strong{display:flex;gap:8px;align-items:center}.growth-card strong .yoga-icon{width:24px;height:24px}.growth-card .breath-trail{height:42px;margin-top:10px;display:flex;justify-content:center;color:var(--lime)}.growth-card .breath-trail .yoga-icon{width:90px;height:44px;margin:0;stroke-width:1.6}.growth-card .breath-trail svg{fill:none;stroke:currentColor}.menu{font-size:12px;letter-spacing:.04em;font-weight:600;border:1px solid #ffffffa0;border-radius:30px;padding:10px 14px;background:#ffffff40}.close{width:auto;height:34px;padding:0 13px;font-size:12px;font-weight:600}.faq summary:after{display:none;content:none}.faq summary>.yoga-icon{width:23px;height:23px;color:#6c852e;transition:color .3s}.faq details[open] summary>.yoga-icon{color:var(--ink)}select{appearance:none;background-image:none}
+/* Mask every studio image edge, including the top and bottom, into its surrounding glass. */
+.hero-person{mask-image:linear-gradient(to bottom,transparent 0,#000 8%,#000 83%,transparent 100%),linear-gradient(to right,transparent 0,#000 12%,#000 88%,transparent 100%);mask-composite:intersect}
+.about-art>img{mask-image:linear-gradient(to bottom,transparent 0,#000 12%,#000 83%,transparent 100%),linear-gradient(to right,transparent 0,#000 12%,#000 88%,transparent 100%);mask-composite:intersect}
+.practice-card img,.modal-image{mask-image:linear-gradient(to bottom,transparent 0,#000 9%,#000 78%,transparent 100%),linear-gradient(to right,transparent 0,#000 10%,#000 90%,transparent 100%);mask-composite:intersect;border:0}
+.practice-card>div{border-top:0}.practice-card{background:linear-gradient(125deg,#ffffff80,#ffffff29 55%,#ffffff65)}
+/* The resting circle breathes; hover changes it to a floating, rippling pool. */
+.ritual-orb{position:relative;isolation:isolate;cursor:pointer;animation:orb-inhale 8s cubic-bezier(.45,0,.55,1) infinite;transition:background .6s,box-shadow .6s;overflow:visible;color:var(--ink)}
+.ritual-orb:before,.ritual-orb:after{content:"";position:absolute;inset:-13px;border-radius:50%;border:1px solid #bccb9980;pointer-events:none;opacity:0;animation:breath-halo 8s ease-in-out infinite}
+.ritual-orb:after{inset:-25px;animation-delay:-1s;border-color:#ffffffb3}.ritual-orb>span{position:relative;z-index:1}
+.ritual-orb:hover,.ritual-orb:focus-visible{animation:orb-hover 3.5s ease-in-out infinite;background:radial-gradient(circle at 30% 25%,#fffffff0,#d6e3b9bb 45%,#adc38288 80%);box-shadow:inset 8px 8px 35px #ffffffd0,0 15px 55px #8da06155}
+.ritual-orb:hover:before,.ritual-orb:focus-visible:before{animation:water-ripple 2.4s ease-out infinite}.ritual-orb:hover:after,.ritual-orb:focus-visible:after{animation:water-ripple 2.4s ease-out infinite 1.2s}
+@keyframes yoga-bloom{0%,100%{transform:scale(.94);opacity:.8}50%{transform:scale(1.07);opacity:1}}
+@keyframes yoga-sway{0%,100%{transform:translateY(1px) rotate(-3deg)}50%{transform:translateY(-2px) rotate(3deg)}}
+@keyframes yoga-balance{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+@keyframes yoga-breath{0%,100%{transform:scaleX(.9);opacity:.75}50%{transform:scaleX(1.08);opacity:1}}
+@keyframes orb-inhale{0%,100%{transform:scale(.87);box-shadow:inset 7px 7px 35px #ffffffb0,0 8px 25px #8c958d20}50%{transform:scale(1.07);box-shadow:inset 7px 7px 45px #ffffffd0,0 15px 60px #9baa7d4d}}
+@keyframes breath-halo{0%,100%{transform:scale(.95);opacity:0}50%{transform:scale(1.06);opacity:.6}}
+@keyframes orb-hover{0%,100%{transform:translateY(0) rotate(-2deg) scale(1.03)}50%{transform:translateY(-9px) rotate(2deg) scale(1.05)}}
+@keyframes water-ripple{0%{transform:scale(.96);opacity:.75}100%{transform:scale(1.3);opacity:0}}
+@media(max-width:760px){.menu{font-size:11px;padding:9px 12px}.star .yoga-icon{width:30px;height:30px}.daily-card>span .yoga-icon{width:31px;height:31px}.strip-icon .yoga-icon{width:26px;height:26px}.round-link .yoga-icon{width:17px;height:17px}.benefits .yoga-icon{width:35px;height:35px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.ritual-orb:before,.ritual-orb:after{opacity:0}}
+/* Transparent photography has no studio rectangle to blend away. */
+.hero-person,.about-art>img,.practice-card img,.modal-image{mix-blend-mode:normal}
+.hero-person{mask-image:linear-gradient(to bottom,#000 0,#000 85%,transparent 100%)}
+.about-art>img,.practice-card img,.modal-image{mask-image:none}
+.about-art>img,.practice-card img,.modal-image{mask-image:linear-gradient(to right,transparent,#000 3%,#000 97%,transparent),linear-gradient(to bottom,transparent,#000 3%,#000 97%,transparent);mask-composite:intersect}
+.growth-card{width:200px}.growth-card strong{white-space:nowrap;font-size:22px}.growth-card strong .yoga-icon{flex-shrink:0}.growth-card .breath-trail{justify-content:flex-start}.growth-card .breath-trail .yoga-icon{width:55px}
+@media(max-width:760px){.growth-card{width:185px}.growth-card strong{font-size:20px}}

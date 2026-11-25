@@ -21,3 +21,9 @@ The owner has not provided contact details, actual class schedule, or pricing. P
 ## Assets
 
 Photography generated with the built-in ImageGen tool. Prompt: “Premium editorial yoga photography asset sheet, six studio photographs with identical light cool gray backgrounds: Indian woman in black yoga clothing standing in calm profile, seated lotus, warrior two, tree, camel, and rear-view mountain meditation at sunrise; realistic anatomy, natural soft lighting, no text or graphics.” Cropped and saved as six optimized WebP files in `assets/`. Logo drawn as SVG. Font: DM Sans via Google Fonts; system sans-serif fallback.
+
+## November visual update
+
+Replaced generic symbols with animated inline SVG lotus, meditation, tree pose, mudra and breath icons. Added transparent studio image cutouts and a stronger breathing pulse with a separate hover/focus ripple animation. Reduced-motion preferences disable movement.
+
+Background extraction used the built-in ImageGen tool with this prompt: “Remove all light gray studio backgrounds behind the five women, preserve poses, faces, clothing, scale and positions; preserve the mountain photograph; keep the exact 1536×1024 canvas and six-cell layout; output genuine transparency.” Final transparent assets are `assets/*-cutout.webp`.
