@@ -36,3 +36,24 @@
 .about-art>img,.practice-card img,.modal-image{mask-image:linear-gradient(to right,transparent,#000 3%,#000 97%,transparent),linear-gradient(to bottom,transparent,#000 3%,#000 97%,transparent);mask-composite:intersect}
 .growth-card{width:200px}.growth-card strong{white-space:nowrap;font-size:22px}.growth-card strong .yoga-icon{flex-shrink:0}.growth-card .breath-trail{justify-content:flex-start}.growth-card .breath-trail .yoga-icon{width:55px}
 @media(max-width:760px){.growth-card{width:185px}.growth-card strong{font-size:20px}}
+/* Keep navigation available without covering anchored section headings. */
+html{scroll-padding-top:125px}
+header{position:sticky;top:0;z-index:50;height:104px;background:linear-gradient(125deg,#eeedeef0,#e4e3e5dc);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid #ffffffa6;border-radius:0 0 23px 23px;box-shadow:0 9px 28px #2b302710;padding:0 18px;margin:0 -18px}
+/* Set text colours explicitly so buttons never inherit a white banner colour. */
+.button.light,.button.outline{color:var(--ink)}
+.button.dark{color:#fff}.button.light:hover,.button.light:focus-visible{color:var(--ink)}
+/* Contain transparent cutouts: their silhouette, hands and feet must remain intact. */
+.hero-person,.about-art>img,.practice-card img,.modal-image{object-fit:contain;object-position:center;mask-image:none;-webkit-mask-image:none}
+.hero-person{object-position:center bottom}.about-art>img{display:block}.modal-image{height:230px}
+/* Hover/focus motion is distinct from the quiet idle breathing animations. */
+:is(button,a,summary):hover .yoga-icon,:is(button,a,summary):focus-visible .yoga-icon,.benefits>div:hover .yoga-icon,.promise-strip>div:hover .yoga-icon,.daily-card:hover .yoga-icon,.growth-card:hover .yoga-icon,.yoga-icon:hover{animation:icon-hover-bloom 1.4s ease-in-out infinite;animation-delay:0s;opacity:1}
+:is(button,a,summary):hover .yoga-meditation,:is(button,a,summary):focus-visible .yoga-meditation,.benefits>div:hover .yoga-meditation,.promise-strip>div:hover .yoga-meditation,.yoga-meditation:hover{animation-name:icon-hover-rise}
+:is(button,a,summary):hover .yoga-breath,:is(button,a,summary):focus-visible .yoga-breath,.growth-card:hover .yoga-breath,.promise-strip>div:hover .yoga-breath,.yoga-breath:hover{animation-name:icon-hover-flow}
+:is(button,a,summary):hover .yoga-mudra,:is(button,a,summary):focus-visible .yoga-mudra,.benefits>div:hover .yoga-mudra,.daily-card:hover .yoga-mudra,.yoga-mudra:hover{animation-name:icon-hover-wave}
+.benefits>div>span,.strip-icon{transition:box-shadow .3s,background .3s}.benefits>div:hover>span{background:#f5fae9;box-shadow:0 8px 22px #768a3e24,inset 0 1px 2px white}
+@keyframes icon-hover-bloom{0%,100%{transform:scale(1.05) rotate(-7deg)}50%{transform:scale(1.22) rotate(7deg)}}
+@keyframes icon-hover-rise{0%,100%{transform:translateY(1px) scale(1.06)}50%{transform:translateY(-5px) scale(1.13)}}
+@keyframes icon-hover-flow{0%,100%{transform:scaleX(.9) translateX(-2px)}50%{transform:scaleX(1.18) translateX(2px)}}
+@keyframes icon-hover-wave{0%,100%{transform:rotate(-10deg) scale(1.06)}50%{transform:rotate(10deg) scale(1.14)}}
+@media(max-width:760px){html{scroll-padding-top:103px}header{height:82px;padding:0 10px;margin:0 -10px;border-radius:0 0 18px 18px}header nav{top:72px}.about-art{height:auto;aspect-ratio:1}.about-art>img{height:auto;width:100%;aspect-ratio:1}.about-art .orbit{max-width:100%;max-height:100%;top:0}.modal-image{height:200px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
